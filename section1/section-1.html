@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>최소 값 구하기</title>
+  </head>
+  <body>
+    <script>
+      function result(a, b, c) {
+        let answer = "";
+        if (a < b) {
+          answer = a;
+        } else {
+          answer = b;
+        }
+        if (c < answer) {
+          answer = c;
+        } else {
+          answer;
+        }
+
+        return answer;
+      }
+
+      console.log(result(14, 1, 91));
+    </script>
+  </body>
+</html>
