@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>최소값 구하기</title>
+  </head>
+  <body>
+    <h3>7개의 배열 수 중 가장 작은 수 출력</h3>
+    <p>input : 7자리 수가 주어진다</p>
+    <p>output : 첫번째 줄에 가장 작은 값 출력</p>
+
+    <script>
+      function minimun(arr) {
+        let answer;
+        let min = Number.MAX_SAFE_INTEGER; // 큰 숫자로 초기화
+
+        for (let i = 0; i < arr.length; i++) {
+          if (arr[i] < min) min = arr[i];
+        }
+        answer = min;
+        return answer;
+      }
+
+      let arr = [9, 5, 2, 5, 9, 5, 1];
+      console.log(minimun(arr));
+    </script>
+  </body>
+</html>
