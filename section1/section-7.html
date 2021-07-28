@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>차량 5부제</title>
+  </head>
+  <body>
+    <script>
+      function solution(day, arr) {
+        // day == 두 자리 수 중 마지막 숫자 => .length( 총 몇대의 차가 나올까? / output )
+        let answer = 0;
+
+        for (let x of arr) {
+          if (x % 10 === day) answer++;
+        }
+
+        // const firstNumber = arr.forEach((element) =>
+        //   element.toString().slice(-1)
+        // );
+
+        // for (let i = 0; i < firstNumber; i++) {
+        //   if (day === firstNumber) {
+        //     answer = i.length;
+        //     console.log(answer);
+        //   }
+        // }
+
+        return answer;
+      }
+
+      arr = [25, 23, 11, 47, 53, 17, 33];
+      console.log(solution(3, arr));
+
+      /*
+      0
+      12 20 54 30 87 91 30
+
+      output : 3
+      */
+    </script>
+  </body>
+</html>
