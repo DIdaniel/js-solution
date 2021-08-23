@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>대문자로 통일</title>
+    </head>
+    <body>
+        <h4>
+            대문자와 소문자가 같이 존재하는 문자열을 입력받아 대문자로 모두
+            통일하여, 문자열을 출력하세요
+        </h4>
+        <script>
+            function solution(str) {
+                let answer = "";
+
+                for (let x of str) {
+                    if (x === x.toLowerCase()) answer += x.toUpperCase();
+                    else answer += x;
+                }
+
+                return answer;
+            }
+
+            let str = "ItisTimeToStudy";
+            console.log(solution(str));
+        </script>
+    </body>
+</html>
+
+<!-- <html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>대문자로 통일</title>
+    </head>
+    <body>
+        <h4>
+            대문자와 소문자가 같이 존재하는 문자열을 입력받아 대문자로 모두
+            통일하여, 문자열을 출력하세요
+        </h4>
+        <script>
+            function solution(str) {
+                let answer = "";
+
+                let up = str.toUpperCase().trim();
+                answer = up;
+
+                return answer;
+            }
+
+            let str = "ItisTimeToStudy";
+            console.log(solution(str));
+        </script>
+    </body>
+</html> -->

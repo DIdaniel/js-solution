@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>대소문자 변환</title>
+    </head>
+    <body>
+        <h4>
+            대문자와 소문자가 같이 존재하는 문자열을 입력 받아, 대문자는
+            소문자로 소문자는 대문자로 변환하여 출력하세요
+        </h4>
+        <p>
+            INPUT : 첫 줄에 문자열이 입력된다. 문자열의 길이는 100을 넘지 않는다
+        </p>
+        <p>
+            OUTPUT : 첫 줄에 대문자는 소문자로, 소문자는 대문자로 변환된
+            문자열을 출력한다
+        </p>
+        <script>
+            function solution(str) {
+                let answer = "";
+
+                for (let i of str) {
+                    console.log(i);
+                    if (i == i.toUpperCase()) answer += i.toLowerCase();
+                    else if (i == i.toLowerCase()) answer += i.toUpperCase();
+                    else answer += i;
+                }
+
+                return answer;
+            }
+
+            console.log(solution("StuDY"));
+        </script>
+    </body>
+</html>
