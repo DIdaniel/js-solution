@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>세 수 중 최솟값</title>
+    </head>
+    <body>
+        <h4>
+            100이하의 자연수 A, B, C를 입력받아 세 수 중 가장 작은 값을 출력하는
+            프로그램을 작성하 세요.(정렬을 사용하면 안됩니다)
+        </h4>
+
+        <p>input: 첫 번째 줄에 100이하의 세 자연수가 입력된다.</p>
+        <p>output: 첫 번째 줄에 가장 작은 수를 출력한다.</p>
+
+        <script>
+            function solution(a, b, c) {
+                //console.log(a, b, c);
+                let answer;
+
+                if (a > b) {
+                    answer = b;
+                } else if (a < b) {
+                    answer = a;
+                }
+
+                if (answer > c) {
+                    answer = c;
+                } else if (answer < c) {
+                    answer;
+                }
+
+                return answer;
+            }
+
+            console.log(solution(9, 2, 3));
+        </script>
+    </body>
+</html>
