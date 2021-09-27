@@ -1,24 +1,23 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>큰 수 출력하기</title>
+    <title>등수 구하기</title>
   </head>
   <body>
     <script>
       function solution(arr) {
-        let answer = [];
-        answer.push(arr[0]);
+        let answer = Array.from({ length: arr.length }, () => 1);
 
         for (let i = 0; i < arr.length; i++) {
-          if (arr[i] > arr[i - 1]) {
-            answer.push(arr[i]);
+          for (let j = 0; j < arr.length; j++) {
+            if (arr[i] < arr[j]) answer[i]++;
           }
         }
 
         return answer;
       }
 
-      let arr = [7, 3, 9, 5, 6, 12];
+      let arr = [87, 89, 92, 100, 76];
       console.log(solution(arr));
     </script>
   </body>
