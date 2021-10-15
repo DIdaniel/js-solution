@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>최소값 구하기</title>
+  </head>
+  <body>
+    100이하의 자연수 A, B, C를 입력받아 세 수 중 가장 작은 값을 출력하는
+    프로그램을 작성하 세요.(정렬을 사용하면 안됩니다) input : 첫 번째 줄에
+    100이하의 세 자연수가 입력된다. output : 첫 번째 줄에 가장 작은 수를
+    출력한다.
+
+    <script>
+      function solution(a, b, c) {
+        let answer = "";
+
+        if (a < 100 && b < 100 && c < 100) {
+          if (a < b) {
+            answer = a;
+          } else {
+            answer = b;
+          }
+          if (answer < c) {
+            answer;
+          } else {
+            answer = c;
+          }
+
+          return answer;
+        } else {
+          console.log("100 이하의 숫자를 넣으세요!");
+        }
+      }
+
+      console.log(solution(99, 56, 100));
+    </script>
+  </body>
+</html>
